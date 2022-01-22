@@ -208,7 +208,7 @@ input:checked + .slider::before {
 .link-section .box-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
@@ -232,33 +232,37 @@ input:checked + .slider::before {
   border-radius: 89% 11% 30% 70% / 22% 0% 100% 78%;
   right: 0px;
   top: 0px;
-  cursor: pointer ;
+  cursor: pointer;
 }
 
 .link-section .box-container .box .color:hover {
-    animation: FI;
-    -webkit-animation: FI;
-    animation-duration: 3px;
+  animation: FI;
+  -webkit-animation: FI;
+  animation-duration: 3px;
 }
 
 @keyframes FI {
-    0%{
-     transform: rotate(0deg);
-     -webkit-transform: rotate(0deg);
-     -moz-transform: rotate(0deg);
-     -ms-transform: rotate(0deg);
-     -o-transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(60deg);
-        -webkit-transform: rotate(60deg);
-        -moz-transform: rotate(60deg);
-        -ms-transform: rotate(60deg);
-        -o-transform: rotate(60deg);
-    }
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+  }
 }
 
-.link-section .box-container .box .color p {
+.link-section .box-container .box .color a {
+  text-decoration: none;
+}
+
+.link-section .box-container .box .color a p {
   color: var(--textColor);
   font-size: 49px;
   font-family: "Rubik Beastly", cursive;
@@ -266,8 +270,8 @@ input:checked + .slider::before {
 }
 
 .link-section .box-container .box .color:hover p {
-    color: var(--color1);
-    font-size: 60px;
+  color: var(--color1);
+  font-size: 60px;
 }
 
 .link-section .box-container .box .box-text {
@@ -278,7 +282,7 @@ input:checked + .slider::before {
 }
 
 .link-section .box-container .box .header h3 {
-    color: var(--textColor);
+  color: var(--textColor);
 }
 
 .link-section .box-container .box .img {
@@ -290,7 +294,19 @@ input:checked + .slider::before {
 }
 
 .link-section .box-container .box .description p {
-    color: var(--PColor);
+  color: var(--PColor);
 }
 
+.link-section .box-container .box .description {
+  height: 88px;
+}
 
+.link-section .box-container .box:hover .description {
+  height: fit-content;
+  transition: height 2s linear;
+  -webkit-transition: height 2s linear;
+  -moz-transition: height 2s linear;
+  -ms-transition: height 2s linear;
+  -o-transition: height 2s linear;
+  min-height: 88px;
+}

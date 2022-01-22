@@ -38,17 +38,42 @@ const boxContainer = document.querySelector(".box-container");
 function createBox(elementHTMLText) {
   // removing old elements
   boxContainer.innerHTML = "";
-  // adding elements to the page
+  // adding elements to the page description
   boxContainer.insertAdjacentHTML("afterbegin", elementHTMLText);
+  document.querySelectorAll(".box").forEach (box=>{
+    box.addEventListener("mouseover",()=>{
+      let boxNumber =box.dataset.id ;
+      let text = allGames[boxNumber].description ;
+      document.querySelectorAll(".description")[boxNumber].innerHTML=  `<p>${text}</p>`;
+    });
+  })
+
+  document.querySelectorAll(".box").forEach (box=>{
+    box.addEventListener("mouseout",()=>{
+      let boxNumber =box.dataset.id ;
+      let boxDescription = allGames[boxNumber].description ;
+      if (boxDescription.length>100){
+        boxDescription = boxDescription.slice(0,100)+"...";
+      }
+      document.querySelectorAll(".description")[boxNumber].innerHTML= `<p>${boxDescription}</p>`;
+    });
+  })
 }
 
 function createElement(allGames) {
     let elementText = '';
+    let counter = 0;
     allGames.forEach ((game)=>{
-        elementText += `
-        <div class="box">
+
+      let disc = game.description;
+      // let text =(disc.split(" ").toString());
+      if (disc.length>100){
+        disc = disc.slice(0,100)+"...";
+      }
+      elementText += `
+        <div class="box" data-id=${counter}>
             <div class="color">
-                <a href="${game.link}">
+                <a href="${game.link}" target="_blank">
                     <p>Play</p>
                 </a>
             </div>
@@ -60,11 +85,12 @@ function createElement(allGames) {
                     <h3>${game.name}</h3>
                 </div>
                 <div class="description">
-                    <p>${game.description}</p>
+                    <p>${disc}</p>
                 </div>
             </div>
         </div>
         `;
+        counter++ ;
     });
   return elementText;
 }
