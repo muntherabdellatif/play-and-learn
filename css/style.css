@@ -315,7 +315,7 @@ input:checked + .slider::before {
 @media (max-width : 426px) {
 
   .container {
-    padding: 0px 8px;
+    padding: 0px 18px;
   }
 
   nav .container .lift-side .title h1 {
@@ -327,7 +327,7 @@ input:checked + .slider::before {
   }
 
   .toggle-text {
-    font-size: 20px;
+    display: none;
   }
 
   .theme-switch {
