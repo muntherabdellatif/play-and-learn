@@ -25,8 +25,8 @@ const allGames = [
     {
         link :"https://gartic.io/" ,
         img : "/img/Gartic.png" ,
-        name : "gartic.io" , 
-        description : "io online and for free. Draw and guess the words as fast as you can! Join on worldwide rooms or create your own." 
+        name : "Gartic" , 
+        description : "Draw and guess the words as fast as you can! Join on worldwide rooms or create your own." 
     } ,
     {
         link : "https://www.typingclub.com/sportal/program-3/116.play" ,
