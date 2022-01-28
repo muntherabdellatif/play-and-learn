@@ -8,49 +8,32 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Learn and play</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/BG.css">
 </head>
 <body>
     <nav>
         <div class="container">
-            <div class="lift-side">
-                <div class="title">
-                    <h1>Play And Learn</h1>
-                </div>
+            <div class="title">
+                <h1>Play And Learn</h1>
             </div>
-            <div class="right-side">
-                <div class="theme-switch-wrapper">
-                    <span id="toggle-icon">
-                        <span class="toggle-text">Light Mode</span>
-                        <i class="fas fa-sun"></i>
-                    </span>
-                    <label class="theme-switch">
-                        <input type="checkbox">
-                        <div class="slider round"></div>
-                    </label>
-                </div>
+            <div class="icon arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="icon paid">
+                <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="icon light-and-dark" id="toggle-icon">
+                <i class="fas fa-sun" id="sun-moon"></i>
+            </div>
+            <div class="link-list">
+                <ul class="list"></ul>
             </div>
         </div>
     </nav>
-    <div class="category-section">
-        <div class="container">
-            <div class="category-box">
-                <label for="game-categoryr">Game Categories</label>
-                <input list="game-category" id="game-category-input" name="game-category-input" 
-                placeholder="Please choose the games Category"/>
-                <datalist id="game-category">
-                    <option value="fast typing">
-                    <option value="english">
-                </datalist>
-            </div>
-        </div>
-    </div>
-    <div class="link-section">
-        <div class="container">
-            <div class="box-container">
-            </div>
-        </div>
-    </div>
+    <div class="sections-container"></div>
     <script src="js/link.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/createElement.js"></script>
+    <script src="js/color.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 </html>
