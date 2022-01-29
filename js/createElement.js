@@ -7,7 +7,7 @@ function createBoxText (sectionType) {
   allGames.forEach((game , index)=>{
     if (game.category.includes(sectionType)){
       BoxText += `
-      <div class="box" data-id=${index}>
+      <div class="box" data-id=${index} data-paid=${game.paid}>
           <div class="color">
               <a href="${game.link}" target="_blank">
                   <p>Play</p>

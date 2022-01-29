@@ -82,8 +82,18 @@ nav .container .title h1 {
   -o-transform: rotate(180deg) translateX(50%);
 }
 
+.arrow.hidden {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .paid {
   left: 25%;
+}
+
+.paid.hidden {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .light-and-dark {
@@ -91,7 +101,8 @@ nav .container .title h1 {
 }
 /* link list */
 
-.link-list {
+.link-list ,
+.paid-list {
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -104,7 +115,8 @@ nav .container .title h1 {
   -o-transition: 0.5s;
 }
 
-.link-list.active {
+.link-list.active ,
+.paid-list.active {
   display: flex;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -113,7 +125,8 @@ nav .container .title h1 {
   -o-transition: 0.5s;
 }
 
-.link-list ul {
+.link-list ul ,
+.paid-list ul{
   display: flex;
   margin: 0;
   list-style: none;
@@ -127,7 +140,8 @@ nav .container .title h1 {
   border-radius: 65px;
 }
 
-.link-list ul li {
+.link-list ul li ,
+.paid-list ul li {
   font-family: "Rubik Beastly", cursive;
   font-size: 25px;
   cursor: pointer;
@@ -143,7 +157,12 @@ nav .container .title h1 {
   text-decoration: none;
 }
 
-.link-list ul li::after {
+.paid-list ul li {
+  color: var(--textColor);
+}
+
+.link-list ul li::after ,
+.paid-list ul li::after{
   content: "";
   width: 80%;
   height: 3px;
@@ -158,13 +177,15 @@ nav .container .title h1 {
   -o-transition: 0.5s;
 }
 
-.link-list ul li:hover:after {
+.link-list ul li:hover::after ,
+.paid-list ul li:hover::after {
   width: 60%;
   left: 20%;
   height: 1.5px;
 }
 
-.link-list ul li:hover {
+.link-list ul li:hover ,
+.paid-list ul li:hover {
   font-size: 30px;
 }
 
@@ -209,12 +230,17 @@ nav .container .title h1 {
 }
 
 .link-section .box-container .box {
+  display: block;
   position: relative;
   width: 270px;
   background-color: var(--color2);
   overflow: hidden;
   margin: 20px;
   border-radius: 20px;
+}
+
+.link-section .box-container .box.hidden{
+  display: none;
 }
 
 .link-section .box-container .box .color {

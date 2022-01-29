@@ -4,10 +4,15 @@ const icon = document.getElementById("sun-moon");
 
 let darkMode = 0 ; 
 
-// change the theme on load acourdning local storge
+// change the theme on load accourdining to  local storage
 if (window.localStorage.theme) {
   currentTheme = window.localStorage.theme;
   document.documentElement.setAttribute("data-theme", currentTheme);
+  if (currentTheme === "dark") {
+    icon.classList.replace("fa-sun", "fa-moon");
+  }else {
+    icon.classList.replace("fa-moon", "fa-sun");
+  }
 }
 
 // toggle
