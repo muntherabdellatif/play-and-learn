@@ -42,7 +42,7 @@ const allGames = [
         description : "Free online spyfall game. ... Spyfall is designed by Alexandr Ushan and published by Hobby World. " 
     } ,
     {
-        category : ["English"],
+        category : ["English","Drawing"],
         paid : "free" ,
         link : "https://skribbl.io/?8dBLMzsl4i1w" ,
         img : "./img/skribbl.jpg" ,

@@ -336,6 +336,10 @@ nav .container .title h1 {
   .main-header h2 {
     margin-top: 75px;
   }
+
+  .link-section::after {
+    height: 75px;
+  }
 }
 
 @media (max-width:769px) {
