@@ -22,8 +22,7 @@ arrowIcon.addEventListener("click",toggleList);
 
 // paid list
 
-function filter(event) {
-    // filter 
+function filterBy (event) {
     let filterBy = "";
     paidListText= event.textContent;
     if (paidListText === "Free Games") {
@@ -33,6 +32,10 @@ function filter(event) {
     } else {
         filterBy ="all";
     }
+    filter(filterBy);
+}
+
+function filter(filterBy) {
     gamesBoxes.forEach (box=>{
         if (filterBy !== "all") {
             if (box.dataset.paid === filterBy) {
@@ -59,7 +62,7 @@ function togglePaidList() {
 PaidListItems.forEach(list=>{
     list.addEventListener("click",()=>{
         togglePaidList();
-        filter(list);
+        filterBy(list);
     });
 });
 
